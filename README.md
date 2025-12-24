@@ -1,10 +1,10 @@
-# \#EVALUACION PRACTICA - Project Management Office (PMO)
+# EVALUACION PRACTICA - Project Management Office (PMO)
 
-\## Ejercicio 1: Instalación del ambiente
+## Ejercicio 1: Instalación del ambiente
 
--Instalación de Visual Studio Code
+- Instalación de Visual Studio Code
+- Instalación de Git y Git Bash
 
--Instalación de Git y Git Bash
 
 
 
