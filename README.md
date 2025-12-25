@@ -6,51 +6,28 @@
 - Instalación de Git y Git Bash
 
 
+## Ejercicio 2: Protocolo HTTP
+- 
 
-
-\## Ejercicio 2: Protocolo HTTP
-
-1\. \*\*Servidor HTTP:\*\* Explicación breve...
-
-2\. \*\*Verbos HTTP:\*\* GET, POST, PUT, DELETE...
-
-3\. \*\*Request/Response/Headers:\*\* Definición y ejemplos...
-
-4\. \*\*queryString:\*\*…
-
-5\. \*\*responseCode:\*\*…
-
-6\.
-
-7\. 
-
-8\.
-
-9\.
-
-10\. \*\*estándar REST Full\*\*
-
-11\.
+- 
 
 
 
+## Ejercicio 3: Requests con Postman
 
+1. Screenshot GET inicial
 
-\## Ejercicio 3: Requests con Postman
+2. Screenshot POST con body
 
-1\. Screenshot GET inicial
-
-2\. Screenshot POST con body
-
-3\. Screenshot GET final
+3. Screenshot GET final
 
 \*\*Diferencias observadas:\*\* ...
 
 
 
-\## Ejercicio 4: Trailhead
+## Ejercicio 4: Trailhead
 
-\- Perfil público: \[Mi perfil Trailhead](URL)
+- Perfil público: \[Mi perfil Trailhead](URL)
 
 
 
