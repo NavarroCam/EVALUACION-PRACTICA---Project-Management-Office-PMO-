@@ -135,13 +135,13 @@
     - Campos estándar: Título, Contenido, Categoría, Estado de publicación.
     - Relación: Se vincula con Cases para resolver incidencias.
 
-**Diagrama UML:**
+### Diagrama UML:
 
 
 
 
 ## Ejercicio 6: Conceptos de Salesforce
-## Soluciones de Salesforce
+### Soluciones de Salesforce
 **A. ¿Qué es Salesforce?**
     Salesforce es el CRM líder mundial, una plataforma en la nube que centraliza la gestión de relaciones con clientes. Permite a las empresas integrar marketing, ventas, servicio y comercio electrónico en un solo sistema.
 
@@ -157,7 +157,7 @@
 **E. ¿Qué es Marketing Cloud?**
     Marketing Cloud es la plataforma de marketing digital de Salesforce. Permite crear campañas personalizadas, automatizar comunicaciones y analizar resultados en múltiples canales (email, redes sociales, publicidad). Su objetivo es mejorar la experiencia del cliente y aumentar la fidelización.
 
-## Funcionalidades de Salesforce 
+### Funcionalidades de Salesforce 
 **A. ¿Qué es un RecordType?** 
     Permite definir variaciones de un mismo objeto (ej. diferentes tipos de cuentas u oportunidades). Se usa para mostrar distintos Page Layouts y procesos de negocio según el tipo de registro.
 
@@ -203,7 +203,7 @@
 **O. ¿Para qué sirve la funcionalidad Chatter?**
     Es la red social interna de Salesforce. Permite colaborar, compartir archivos, comentar registros y seguir actualizaciones dentro de la plataforma.
 
-## Conceptos generales 
+### Conceptos generales 
 **A. ¿Qué significa SaaS?**
     Software as a Service: modelo en el que el software se ofrece como servicio en la nube, accesible vía internet, sin necesidad de instalarlo localmente.
 
@@ -242,15 +242,13 @@
     Ejecución de tareas en bloques o lotes, generalmente programadas, para procesar grandes volúmenes de datos sin intervención manual.
 
 **L. ¿Qué es Kanban?** 
-
-    Método visual de gestión de trabajo basado en tableros y tarjetas. Permite organizar tareas en columnas (Pendiente, En proceso, Hecho).
+Método visual de gestión de trabajo basado en tableros y tarjetas. Permite organizar tareas en columnas (Pendiente, En proceso, Hecho).
 
 **M. ¿Qué es un ERP?**
+Enterprise Resource Planning: sistema que integra procesos internos de la empresa (finanzas, inventario, producción, RRHH)
 
-    Enterprise Resource Planning: sistema que integra procesos internos de la empresa (finanzas, inventario, producción, RRHH)
-
-### N. ¿Salesforce es un ERP?
-    No, Salesforce es un CRM (Customer Relationship Management), enfocado en clientes, ventas y marketing. Aunque tiene integraciones con ERP, no reemplaza su función principal.
+**N. ¿Salesforce es un ERP?**
+No, Salesforce es un CRM (Customer Relationship Management), enfocado en clientes, ventas y marketing. Aunque tiene integraciones con ERP, no reemplaza su función principal.
 
 
 ## Ejercicio 7: Desarrollo en Playground
