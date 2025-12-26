@@ -234,18 +234,23 @@
     KPI (Key Performance Indicator): indicador clave de desempeño que mide el éxito de un proceso o estrategia.
 
 **J. ¿Qué es una API y en qué se diferencia de una Rest API?** 
+
     Una  API es el concepto general de interfaz de comunicación, mientras que REST API es una implementación específica que sigue reglas claras para trabajar con recursos vía HTTP.
 
 **K. ¿Qué es un Proceso Batch?** 
+
     Ejecución de tareas en bloques o lotes, generalmente programadas, para procesar grandes volúmenes de datos sin intervención manual.
 
 **L. ¿Qué es Kanban?** 
+
     Método visual de gestión de trabajo basado en tableros y tarjetas. Permite organizar tareas en columnas (Pendiente, En proceso, Hecho).
 
 **M. ¿Qué es un ERP?**
+
     Enterprise Resource Planning: sistema que integra procesos internos de la empresa (finanzas, inventario, producción, RRHH)
 
 **N. ¿Salesforce es un ERP?**
+
     No, Salesforce es un CRM (Customer Relationship Management), enfocado en clientes, ventas y marketing. Aunque tiene integraciones con ERP, no reemplaza su función principal.
 
 
