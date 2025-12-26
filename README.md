@@ -68,14 +68,18 @@ Content-type en un header?
 
 ## Ejercicio 3: Requests con Postman
 
-1. Screenshot GET inicial
+1. Realizar un request GET a la URL: https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts.json
     ![alt text](image.png)
 
-2. Screenshot POST con body
+2. Realizar un request POST a la URL anterior, y con body: 
+    ![alt text](image-1.png)
 
-3. Screenshot GET final
+3. Realizar nuevamente un request GET a la URL: 
+    ![alt text](image-2.png)
 
-\*\*Diferencias observadas:\*\* ...
+Diferencias observadas entre las llamadas el punto 1 y 3: 
+- Antes (GET P1): Solo los registros existentes.
+- Después (GET P3): Incluye el nuevo contacto creado con el POST (aparece bajo un ID único generado por Firebase).
 
 
 
