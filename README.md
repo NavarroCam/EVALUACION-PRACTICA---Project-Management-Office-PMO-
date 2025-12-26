@@ -89,131 +89,184 @@ Diferencias observadas entre las llamadas el punto 1 y 3:
 
 
 
-\## Ejercicio 5: Objetos de Salesforce
+## Ejercicio 5: Objetos de Salesforce
+1. **Lead**
+   - Concepto: Registro de un prospecto sin calificar (persona o empresa interesada).
+   - Campos estándar: Nombre, Empresa, Email, Teléfono, Estado, Fuente del lead.
+   - Relación: Se convierte en Account + Contact + Opportunity.
 
-1\. \*\*Lead:\*\* campos estándar...
+2. **Account**
+   - Concepto: Empresa o entidad con la que se tiene relación comercial.
+   - Campos estándar: Nombre de la cuenta, Industria, Dirección, Teléfono, Tipo.
+   - Relación: Se vincula con Contacts, Opportunities, Cases, Assets.
 
-2\. \*\*Account:\*\* campos estándar...
+3. **Contact**
+   - Concepto: Persona asociada a una cuenta.
+   - Campos estándar: Nombre, Apellido, Email, Teléfono, Cargo, Dirección.
+   - Relación: Relacionado con Account, Opportunities, Cases.
 
-3\. \*\*Contact:\*\* campos estándar...
+4. **Opportunity**
+   - Concepto: Negocio potencial en curso.
+   - Campos estándar: Nombre, Etapa, Monto, Fecha de cierre, Cuenta asociada.
+   - Relación: Se vincula con Account, Contact, Quote, Product (a través de PriceBook).
 
-4\. \*\*Opportunity:\*\* …
+5. **Product**
+   - Concepto: Bienes o servicios que la empresa vende.
+   - Campos estándar: Nombre, Código, Descripción, Estado (activo/inactivo).
+   - Relación: Se asocia a PriceBooks, Opportunities, Quotes.
 
-5\.
+6. **PriceBook**
+   - Concepto: Lista de precios de productos.
+   - Campos estándar: Nombre, Estado (activo/inactivo).
+   - Relación: Conecta Products con Opportunities y Quotes.
 
-6\.
+7. **Quote**
+   - Concepto: Propuesta comercial enviada al cliente.
+   - Campos estándar: Nombre, Estado, Fecha de vencimiento, Total.
+   - Relación: Asociado a Opportunity, Products, PriceBook.
 
-7\.
+8. **Asset**
+   - Concepto: Producto adquirido por un cliente (ya vendido).
+   - Campos estándar: Nombre, Producto, Número de serie, Estado, Cuenta asociada.
+   - Relación: Se vincula con Account, Contact, Product, Case.
 
-8\.
+9. **Case**
+   - Concepto: Registro de soporte o incidencia de un cliente.
+   - Campos estándar: Número de caso, Estado, Prioridad, Descripción, Cuenta, Contacto.
+   - Relación: Asociado a Account, Contact, Asset, Article.
 
-9\.
+10. **Article**
+    - Concepto: Documento de conocimiento (FAQ, guía, solución).
+    - Campos estándar: Título, Contenido, Categoría, Estado de publicación.
+    - Relación: Se vincula con Cases para resolver incidencias.
 
-10\.
 
 
+** Diagrama UML:**
 
-\*\* Diagrama UML:\*\*
 
-!\[Diagrama UML](docs/diagrama.png)
 
 
+## Ejercicio 6: Conceptos de Salesforce
 
-\## Ejercicio 6: Conceptos de Salesforce
+## Soluciones de Salesforce
+- ¿Qué es Salesforce? 
+    Salesforce es el CRM líder mundial, una plataforma en la nube que centraliza la gestión de relaciones con clientes. Permite a las empresas integrar marketing, ventas, servicio y comercio electrónico en un solo sistema.
 
-\## Soluciones de Salesforce
+- ¿Qué es Sales Cloud? 
+    Sales Cloud es la solución de ventas de Salesforce. Ayuda a gestionar clientes potenciales, oportunidades y cerrar acuerdos con mayor eficiencia. Automatiza tareas de ventas y ofrece información en tiempo real para impulsar ingresos.
 
-\- ¿Qué es Salesforce? → ...
+- ¿Qué es Service Cloud? 
+    Service Cloud es la plataforma de atención al cliente de Salesforce. Permite ofrecer soporte multicanal (teléfono, chat, email, redes sociales) con agentes humanos e inteligencia artificial. Su objetivo es mejorar la experiencia del cliente y reducir costos de servicio.
 
-\- ¿Qué es Sales Cloud? → ...
+- ¿Qué es Health Cloud?
+    Health Cloud es la solución para el sector sanitario. Centraliza datos clínicos y no clínicos de pacientes, facilitando la colaboración entre profesionales de la salud. Mejora la atención personalizada y la coordinación de cuidados.
 
-* ¿Qué es Service Cloud? 
-* ¿Qué es Health Cloud?
-* ¿Qué es Marketing Cloud?
+- ¿Qué es Marketing Cloud?
+    Marketing Cloud es la plataforma de marketing digital de Salesforce. Permite crear campañas personalizadas, automatizar comunicaciones y analizar resultados en múltiples canales (email, redes sociales, publicidad). Su objetivo es mejorar la experiencia del cliente y aumentar la fidelización.
 
 
+## Funcionalidades de Salesforce 
+- ¿Qué es un RecordType? 
+    Permite definir variaciones de un mismo objeto (ej. diferentes tipos de cuentas u oportunidades). Se usa para mostrar distintos Page Layouts y procesos de negocio según el tipo de registro.
 
-\## Funcionalidades de Salesforce 
+- ¿Qué es un ReportType? 
+    Es la plantilla base de un informe. Define qué objetos y relaciones estarán disponibles para construir un reporte.
 
-A. ¿Qué es un RecordType? 
+- ¿Qué es un Page Layout? 
+    Es el diseño de la interfaz de usuario para un objeto. Controla qué campos, secciones, botones y listas relacionadas se muestran.
 
-B. ¿Qué es un ReportType? 
+- ¿Qué es un Compact Layout? 
+    Define los campos clave que aparecen en la vista rápida (ej. encabezado de un registro en móvil o Lightning).
 
-C. ¿Qué es un Page Layout? 
+- ¿Qué es un Perfil? 
+    Es un conjunto de permisos y configuraciones que determinan qué puede hacer un usuario en Salesforce (objetos, campos, apps).
 
-D. ¿Qué es un Compact Layout? 
+- ¿Qué es un Rol? 
+    Define la jerarquía de visibilidad de datos. Controla qué registros puede ver un usuario según su posición en la organización.
 
-E. ¿Qué es un Perfil? 
+- ¿Qué es un Validation Rule? 
+    Son reglas que validan datos antes de guardar un registro.
 
-F. ¿Qué es un Rol? 
+- ¿Qué diferencia hay entre una relación Master Detail y Lookup? 
+    El Master-Detail es una relación fuerte, el registro hijo depende del padre (si se borra el padre, se borra el hijo), encambio el Lookup es una relación más flexible, el hijo puede existir sin el padre.
 
-G. ¿Qué es un Validation Rule? 
+- ¿Qué es un Sandbox? 
+    Es un entorno de pruebas aislado de producción. Permite desarrollar, probar y entrenar sin afectar los datos reales.
 
-¿Qué es un Sandbox? 
+- ¿Qué es un ChangeSet? 
+    Es un paquete para migrar configuraciones y personalizaciones entre entornos.
 
-H. ¿Qué diferencia hay entre una relación Master Detail y Lookup? 
+- ¿Para qué sirve el import Wizard de Salesforce? 
+    Herramienta para importar datos (cuentas, contactos, leads, soluciones) de forma sencilla y guiada.
 
-I. 
+- ¿Para qué sirve la funcionalidad Web to Lead? 
+    Permite crear un formulario web que captura leads directamente en Salesforce.
 
-J. 
+- ¿Para qué sirve la funcionalidad Web to Case? 
+    Similar a Web to Lead, pero para casos de soporte. Los clientes envían un formulario y se genera un caso automáticamente.
 
-¿Qué es un ChangeSet? 
+- ¿Para qué sirve la funcionalidad Omnichannel? 
+    Distribuye automáticamente casos, leads o tareas a los agentes disponibles. Optimiza la carga de trabajo y mejora tiempos de respuesta.
 
-K. ¿Para qué sirve el import Wizard de Salesforce? 
+- ¿Para qué sirve la funcionalidad Chatter? 
+    Es la red social interna de Salesforce. Permite colaborar, compartir archivos, comentar registros y seguir actualizaciones dentro de la plataforma.
 
-L. ¿Para qué sirve la funcionalidad Web to Lead? 
+## Conceptos generales 
+- ¿Qué significa SaaS? 
+    Software as a Service: modelo en el que el software se ofrece como servicio en la nube, accesible vía internet, sin necesidad de instalarlo localmente.
 
-M. ¿Para qué sirve la funcionalidad Web to Case? 
+- ¿Salesforce es Saas? 
+    Sí, Salesforce es un SaaS porque se consume como servicio en la nube, con pago por suscripción.
 
-N. ¿Para qué sirve la funcionalidad Omnichannel? 
+- ¿Qué significa que una solución sea Cloud? 
+    Que está alojada en servidores externos y se accede por internet. No requiere infraestructura propia del cliente.
 
-O. ¿Para qué sirve la funcionalidad Chatter? 
+- ¿Qué significa que una solución sea On-Premise? 
+    Que el software se instala y ejecuta en los servidores internos de la empresa. Requiere mantenimiento y gestión propia.
 
+- ¿Qué es un pipeline de ventas? 
+    Es la lista de oportunidades de venta en curso, organizadas por etapas. Permite visualizar el estado de cada negocio y prever ingresos.
 
+- ¿Qué es un funnel de ventas? 
+    Es el embudo de ventas que representa el recorrido del cliente desde el interés inicial hasta la compra. Muestra cómo se van filtrando los prospectos en cada etapa.
 
-\## Conceptos generales 
+- ¿Qué significa Customer Experience? 
+    Es la experiencia total del cliente al interactuar con una marca. Incluye percepción, emociones y satisfacción en cada punto de contacto.
 
-A. ¿Qué significa SaaS? 
+- ¿Qué significa omnicanalidad? 
+    Estrategia que integra todos los canales de comunicación y venta (web, móvil, tienda física, redes sociales) para ofrecer una experiencia unificada.
 
-B. ¿Salesforce es Saas? 
+- ¿Qué significa que un negocio sea B2B?¿Qué significa que un negocio sea B2C?¿Qué es un KPI? 
+    B2B (Business to Business): empresas que venden a otras empresas.
+    B2C (Business to Consumer): empresas que venden directamente al consumidor final.
+    KPI (Key Performance Indicator): indicador clave de desempeño que mide el éxito de un proceso o estrategia.
 
-C. ¿Qué significa que una solución sea Cloud? 
+- ¿Qué es una API y en qué se diferencia de una Rest API? 
+    Una  API es el concepto general de interfaz de comunicación, mientras que REST API es una implementación específica que sigue reglas claras para trabajar con recursos vía HTTP.
 
-D. ¿Qué significa que una solución sea On-Premise? 
+- ¿Qué es un Proceso Batch? 
+    Ejecución de tareas en bloques o lotes, generalmente programadas, para procesar grandes volúmenes de datos sin intervención manual.
 
-E. ¿Qué es un pipeline de ventas? 
+- ¿Qué es Kanban? 
+    Método visual de gestión de trabajo basado en tableros y tarjetas. Permite organizar tareas en columnas (Pendiente, En proceso, Hecho).
 
-F. ¿Qué es un funnel de ventas? 
+- ¿Qué es un ERP?  
+    Enterprise Resource Planning: sistema que integra procesos internos de la empresa (finanzas, inventario, producción, RRHH)
 
-G. ¿Qué significa Customer Experience? 
+- ¿Salesforce es un ERP?
+    No, Salesforce es un CRM (Customer Relationship Management), enfocado en clientes, ventas y marketing. Aunque tiene integraciones con ERP, no reemplaza su función principal.
 
-H. ¿Qué significa omnicanalidad? 
 
-I. ¿Qué significa que un negocio sea B2B?¿Qué significa que un negocio sea 
+## Ejercicio 7: Desarrollo en Playground
 
-B2C?¿Qué es un KPI? 
+- GET con Postman mostrando ID
 
-J. ¿Qué es una API y en qué se diferencia de una Rest API? 
+- Campo `idprocontacto` creado
 
-K. ¿Qué es un Proceso Batch? 
+- Trigger Apex implementado
 
-L. ¿Qué es Kanban? 
-
-M. ¿Qué es un ERP?  
-
-N. ¿Salesforce es un ERP?
-
-
-
-\## Ejercicio 7: Desarrollo en Playground
-
-\- GET con Postman mostrando ID
-
-\- Campo `idprocontacto` creado
-
-\- Trigger Apex implementado
-
-\- Código subido en `/src/triggers/ContactTrigger.apex`
+- Código subido en `/src/triggers/ContactTrigger.apex`
 
 
 
