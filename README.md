@@ -249,8 +249,7 @@
 
     Enterprise Resource Planning: sistema que integra procesos internos de la empresa (finanzas, inventario, producción, RRHH)
 
-**N. ¿Salesforce es un ERP?**
-
+### N. ¿Salesforce es un ERP?
     No, Salesforce es un CRM (Customer Relationship Management), enfocado en clientes, ventas y marketing. Aunque tiene integraciones con ERP, no reemplaza su función principal.
 
 
