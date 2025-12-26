@@ -7,15 +7,69 @@
 
 
 ## Ejercicio 2: Protocolo HTTP
-- 
+1. ¿Qué es un servidor HTTP?  
+    Es un software que recibe solicitudes de clientes (navegadores, apps) y devuelve recursos como HTML, CSS, imágenes o datos.
 
-- 
+2. ¿Qué son los verbos HTTP? Mencionar los más conocidos
+    Son métodos que definen la acción sobre un recurso. 
+    Los más conocidos son:
+    - GET: obtener datos.
+    - POST: enviar datos.
+    - PUT: actualizar un recurso.
+    - DELETE: eliminar.
+    - PATCH: modificar parcialmente.
+    - OPTIONS: consultar capacidades del servidor.
 
+3. ¿Qué es un request y un response en una comunicación HTTP? ¿Qué son los headers? 
+    - Request: la petición del cliente (ej. navegador).
+    - Response: la respuesta del servidor.
+    - Headers: metadatos que acompañan la comunicación (ej. tipo de contenido, autenticación, idioma).
+
+4. ¿Qué es un queryString? (En el contexto de una url) 
+    Es una parte de la URL que contiene parámetros.
+    - Por ejemplo:    https://ejemplo.com/productos?id=123&color=rojo
+    Aquí id=123 y color=rojo son parámetros
+
+5. ¿Qué es el responseCode? ¿Qué significado tiene los posibles valores devueltos?
+    Es el código de estado que indica el resultado. 
+    Posibles valores devueltos:
+    - 200: OK.
+    - 301/302: redirección.
+    - 400: error del cliente.
+    - 401/403: no autorizado/prohibido.
+    - 404: recurso no encontrado.
+    - 500: error del servidor.
+
+6. ¿Cómo se envía la data en un Get y cómo en un POST? 
+    - GET: datos en la URL como parámetros.
+    - POST: datos en el cuerpo del mensaje, más seguro para información sensible.
+
+7. ¿Qué verbo http utiliza el navegador cuando accedemos a una página?
+    Al acceder a una página, el navegador usa GET.
+
+8. Explicar brevemente qué son las estructuras de datos JSON y XML dando ejemplo de estructuras posibles.
+- JSON: formato ligero basado en pares clave-valor.
+    Ejemplo: { "nombre": "Camila", "email": "camila@example.com" }
+
+- XML: formato basado en etiquetas.
+    Ejemplo: <usuario><nombre>Camila</nombre><email>camila@example.com</email></usuario>
+
+9. Explicar brevemente el estándar SOAP.
+    Es un estándar de comunicación basado en XML, usa mensajes estructurados y protocolos como HTTP o SMTP. Más rígido y formal, común en sistemas empresariales.
+
+10. Explicar brevemente el estándar REST Full.
+    Es un estándar con una arquitectura ligera que usa HTTP y formatos como JSON. Opera con recursos identificados por URLs y verbos HTTP. Más flexible y ampliamente usado en APIs modernas.
+
+11. ¿Qué son los headers en un request? ¿Para qué se utiliza el key 
+Content-type en un header?
+    Los Headers son metadatos en la petición (ej. autenticación, idioma, tipo de contenido). 
+    El key Content-Type indica el formato del cuerpo (ej. application/json, text/html), permite al servidor interpretar correctamente los datos enviados.
 
 
 ## Ejercicio 3: Requests con Postman
 
 1. Screenshot GET inicial
+    ![alt text](image.png)
 
 2. Screenshot POST con body
 
