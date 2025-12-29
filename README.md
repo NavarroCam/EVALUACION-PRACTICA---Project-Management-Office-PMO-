@@ -27,7 +27,7 @@ Los más conocidos son:
 **4. ¿Qué es un queryString? (En el contexto de una url)**<br>
 Es una parte de la URL que contiene parámetros.
 - Por ejemplo:    https://ejemplo.com/productos?id=123&color=rojo<br>
-    Aquí id=123 y color=rojo son parámetros
+Aquí id=123 y color=rojo son parámetros
 
 **5. ¿Qué es el responseCode? ¿Qué significado tiene los posibles valores devueltos?**<br>
 Es el código de estado que indica el resultado.<br>
@@ -66,13 +66,13 @@ El key Content-Type indica el formato del cuerpo (ej. application/json, text/htm
 
 ## Ejercicio 3: Requests con Postman
 **1. Realizar un request GET a la URL: https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts.json**
-    ![alt text](image.png)
+![alt text](image.png)
 
 **2. Realizar un request POST a la URL anterior, y con body:**
-    ![alt text](image-1.png)
+![alt text](image-1.png)
 
 **3. Realizar nuevamente un request GET a la URL:**
-    ![alt text](image-2.png)
+![alt text](image-2.png)
 
 **Diferencias observadas entre las llamadas el punto 1 y 3:** 
 - Antes (GET P1): Solo los registros existentes.
@@ -80,64 +80,70 @@ El key Content-Type indica el formato del cuerpo (ej. application/json, text/htm
 
 
 ## Ejercicio 4: Trailhead
-**Perfil público: \[Mi perfil Trailhead](URL)**
+**URL del Perfil :** https://www.salesforce.com/trailblazer/ku0z1a9j64flo27iuw
 
+### Módulos completados:
+  - Fundamento de la plataforma Salesforce
+  - Fundamentos de Apex y .NET
+  - Modelado de datos
+  - Fundamentos y base de datos de Ápex
+  - Desencadenadores de Ápex
+  - Apex Integration Services
 
 
 ## Ejercicio 5: Objetos de Salesforce
 **1. Lead**
-   - Concepto: Registro de un prospecto sin calificar (persona o empresa interesada).
-   - Campos estándar: Nombre, Empresa, Email, Teléfono, Estado, Fuente del lead.
-   - Relación: Se convierte en Account + Contact + Opportunity.
+- Concepto: Potencial cliente que todavía no fue calificado. Es alguien que mostró interés, pero aún no se sabe si es cliente real.
+- Campos estándar: Nombre, Empresa, Email, Teléfono, Estado, Fuente del lead.
+- Relación: No se relaciona directamente con Account, Contact u Opportunity. Al convertirse, genera Account, Contact y opcionalmente una Opportunity.
 
 **2. Account**
-   - Concepto: Empresa o entidad con la que se tiene relación comercial.
-   - Campos estándar: Nombre de la cuenta, Industria, Dirección, Teléfono, Tipo.
-   - Relación: Se vincula con Contacts, Opportunities, Cases, Assets.
+- Concepto: Empresa o entidad con la que se tiene relación comercial.
+- Campos estándar: Nombre de la cuenta, Industria, Dirección, Teléfono, Tipo.
+- Relación: Se vincula con Contacts, Opportunities, Cases, Assets. Puede tener Quotes (indirectamente).
 
 **3. Contact**
-   - Concepto: Persona asociada a una cuenta.
-   - Campos estándar: Nombre, Apellido, Email, Teléfono, Cargo, Dirección.
-   - Relación: Relacionado con Account, Opportunities, Cases.
+- Concepto: Persona específica que trabaja o pertenece a un Account.
+- Campos estándar: Nombre, Apellido, Email, Teléfono, Cargo, Dirección.
+- Relación: Pertenece a un Account. Puede estar relacionado con Opportunities, Cases y Quotes.
 
 **4. Opportunity**
-   - Concepto: Negocio potencial en curso.
-   - Campos estándar: Nombre, Etapa, Monto, Fecha de cierre, Cuenta asociada.
-   - Relación: Se vincula con Account, Contact, Quote, Product (a través de PriceBook).
+- Concepto: Negocio potencial en curso.
+- Campos estándar: Nombre, Etapa, Monto, Fecha de cierre, Cuenta asociada.
+- Relación: Se vincula con Account, Contact, Quote, Product (a través de PriceBook).
 
 **5. Product**
-   - Concepto: Bienes o servicios que la empresa vende.
-   - Campos estándar: Nombre, Código, Descripción, Estado (activo/inactivo).
-   - Relación: Se asocia a PriceBooks, Opportunities, Quotes.
+- Concepto: Bienes o servicios que la empresa vende.
+- Campos estándar: Nombre, Código, Descripción, Estado (activo/inactivo).
+- Relación: Se vincula a PriceBook, Opportunities y Quotes. No se relaciona directamente con Account o Contact.
 
 **6. PriceBook**
-   - Concepto: Lista de precios de productos.
-   - Campos estándar: Nombre, Estado (activo/inactivo).
-   - Relación: Conecta Products con Opportunities y Quotes.
+- Concepto: Lista de precios de productos.
+- Campos estándar: Nombre, Estado (activo/inactivo).
+- Relación: Contiene muchos Products. Se asigna a Opportunities y Quotes.
 
 **7. Quote**
-   - Concepto: Propuesta comercial enviada al cliente.
-   - Campos estándar: Nombre, Estado, Fecha de vencimiento, Total.
-   - Relación: Asociado a Opportunity, Products, PriceBook.
+- Concepto: Propuesta comercial enviada al cliente.
+- Campos estándar: Nombre, Estado, Fecha de vencimiento, Total.
+- Relación: Pertenece a una Opportunity. Usa un PriceBook. Tiene Products. Relacionada indirectamente con Account y Contact
 
 **8. Asset**
-   - Concepto: Producto adquirido por un cliente (ya vendido).
-   - Campos estándar: Nombre, Producto, Número de serie, Estado, Cuenta asociada.
-   - Relación: Se vincula con Account, Contact, Product, Case.
+- Concepto: Producto adquirido por un cliente (ya vendido).
+- Campos estándar: Nombre, Producto, Número de serie, Estado, Cuenta asociada.
+- Relación: Pertenece a un Account. Se origina desde Opportunity y Product.
 
 **9. Case**
-   - Concepto: Registro de soporte o incidencia de un cliente.
-   - Campos estándar: Número de caso, Estado, Prioridad, Descripción, Cuenta, Contacto.
-   - Relación: Asociado a Account, Contact, Asset, Article.
+- Concepto: Ticket de soporte o atención al cliente.
+- Campos estándar: Número de caso, Estado, Prioridad, Descripción, Cuenta, Contacto.
+- Relación: Pertenece a un Account. Asociado a Contact y Asset.
 
 **10. Article**
-    - Concepto: Documento de conocimiento (FAQ, guía, solución).
-    - Campos estándar: Título, Contenido, Categoría, Estado de publicación.
-    - Relación: Se vincula con Cases para resolver incidencias.
+- Concepto: Documento de conocimiento (FAQ, guía, solución).
+- Campos estándar: Título, Contenido, Categoría, Estado de publicación.
+- Relación: No tiene relaciones directas obligatorias. Se vincula con Cases para resolver incidencias.
 
 ### Diagrama UML:
-
-
+![alt text](<EJERCiCIO 5.drawio.png>)
 
 
 ## Ejercicio 6: Conceptos de Salesforce
@@ -156,7 +162,7 @@ Health Cloud es la solución para el sector sanitario. Centraliza datos clínico
 
 **E. ¿Qué es Marketing Cloud?**<br>
 Marketing Cloud es la plataforma de marketing digital de Salesforce. Permite crear campañas personalizadas, automatizar comunicaciones y analizar resultados en múltiples canales (email, redes sociales, publicidad). Su objetivo es mejorar la experiencia del cliente y aumentar la fidelización.
-<br>
+
 
 ### Funcionalidades de Salesforce 
 **A. ¿Qué es un RecordType?**<br> 
@@ -203,7 +209,6 @@ Distribuye automáticamente casos, leads o tareas a los agentes disponibles. Opt
 
 **O. ¿Para qué sirve la funcionalidad Chatter?**<br>
 Es la red social interna de Salesforce. Permite colaborar, compartir archivos, comentar registros y seguir actualizaciones dentro de la plataforma.
-<br>
 
 ### Conceptos generales 
 **A. ¿Qué significa SaaS?**<br>
@@ -245,7 +250,7 @@ Ejecución de tareas en bloques o lotes, generalmente programadas, para procesar
 Método visual de gestión de trabajo basado en tableros y tarjetas. Permite organizar tareas en columnas (Pendiente, En proceso, Hecho).
 
 **M. ¿Qué es un ERP?**<br>
-Enterprise Resource Planning: sistema que integra procesos internos de la empresa (finanzas, inventario, producción, RRHH)
+Enterprise Resource Planning: sistema que integra procesos internos de la empresa (finanzas, inventario, producción, RRHH).
 
 **N. ¿Salesforce es un ERP?**<br>
 No, Salesforce es un CRM (Customer Relationship Management), enfocado en clientes, ventas y marketing. Aunque tiene integraciones con ERP, no reemplaza su función principal.
