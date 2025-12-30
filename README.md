@@ -256,12 +256,19 @@ Enterprise Resource Planning: sistema que integra procesos internos de la empres
 No, Salesforce es un CRM (Customer Relationship Management), enfocado en clientes, ventas y marketing. Aunque tiene integraciones con ERP, no reemplaza su función principal.
 
 
-## Ejercicio 7: Desarrollo en Playground
-**A. Consultar tu ID haciendo un GET con POSTMAN a este WS: https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts.json**
+## Ejercicio 7: Desarrollo en "Playground 1"
 
-**B. Agregar un campo al objeto Contact llamado idprocontacto de tipo texto de 255 caracteres.**
+**Trigger en Salesforce que, al crear o modificar un Contact con el campo `idprocontacto__c`, realiza un callout REST a Firebase y actualiza el Email.**
 
+## Tecnologías
+- Apex
+- Trigger after insert / after update
+- Queueable
+- REST Callout
 
-**C. Desarrollar un desencadenador para que, al modificar o crear un contacto en Salesforce completando el campo generado en el punto B, se invoque el servicio web del punto A. Con el campo idprocontacto de la respuesta, se deberán obtener los datos de correo electrónico y actualizar el campo de correo electrónico del contacto. Utilizar Playground 1.**
-
-
+## Funcionamiento
+1. Se crea o edita un Contact
+2. Se completa `idprocontacto__c`
+3. El trigger encola un Queueable
+4. Se consulta el servicio REST
+5. Se actualiza el campo Email

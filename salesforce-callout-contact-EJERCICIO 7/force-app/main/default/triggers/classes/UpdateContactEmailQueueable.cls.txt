@@ -1,0 +1,44 @@
+public class UpdateContactEmailQueueable
+    implements Queueable, Database.AllowsCallouts {
+
+    private List<Id> contactIds;
+
+    public UpdateContactEmailQueueable(List<Id> contactIds) {
+        this.contactIds = contactIds;
+    }
+
+    public void execute(QueueableContext context) {
+
+        List<Contact> contacts = [
+            SELECT Id, Email, idprocontacto__c
+            FROM Contact
+            WHERE Id IN :contactIds
+        ];
+
+        Http http = new Http();
+
+        for (Contact c : contacts) {
+
+            HttpRequest req = new HttpRequest();
+            req.setEndpoint(
+                'https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts/'
+                + c.idprocontacto__c + '.json'
+            );
+            req.setMethod('GET');
+
+            HttpResponse res = http.send(req);
+
+            if (res.getStatusCode() == 200) {
+                Map<String, Object> result =
+                    (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
+
+                String email = (String) result.get('email');
+                if (email != null) {
+                    c.Email = email;
+                }
+            }
+        }
+
+        update contacts;
+    }
+}
