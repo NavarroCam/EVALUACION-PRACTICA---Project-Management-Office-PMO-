@@ -260,13 +260,13 @@ No, Salesforce es un CRM (Customer Relationship Management), enfocado en cliente
 
 **Trigger en Salesforce que, al crear o modificar un Contact con el campo `idprocontacto__c`, realiza un callout REST a Firebase y actualiza el Email.**
 
-## Tecnologías
+### Tecnologías
 - Apex
 - Trigger after insert / after update
 - Queueable
 - REST Callout
 
-## Funcionamiento
+### Funcionamiento
 1. Se crea o edita un Contact
 2. Se completa `idprocontacto__c`
 3. El trigger encola un Queueable
